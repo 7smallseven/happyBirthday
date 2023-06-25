@@ -1,0 +1,15 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/dev_db?connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+  liquibase:
+    change-log: classpath:db/changelog/master.xml
+    enabled: true
+  flyway:
+    enabled: false
